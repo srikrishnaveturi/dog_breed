@@ -44,6 +44,7 @@ class _TfLiteHomeState extends State<TfLiteHome> {
         );
       } on Exception catch (e) {
         print("couldn't load model");
+        print(e);
       }
   }
 
@@ -89,7 +90,6 @@ class _TfLiteHomeState extends State<TfLiteHome> {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.black,
         appBar: AppBar(
@@ -109,19 +109,17 @@ class _TfLiteHomeState extends State<TfLiteHome> {
         )
             : Container(
 
-          width: size.width,
-          height: size.height - 30.0,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              _image == null ? Container() : Image.file(_image),
+              _image == null ? Container() : Center(child: Image.file(_image,height: 500.0,width: 300,)),
               SizedBox(
                 height: 10.0,
               ),
               _recognitions != null
                   ? Text(
-                "${_recognitions[0]["label"]}",
+                "${_recognitions[0]["label"].substring(2,)}",
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 20.0,
