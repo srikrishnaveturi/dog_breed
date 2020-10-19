@@ -1,0 +1,20 @@
+0 beagle
+1 bernese mountain dog
+2 border collie
+3 boxer
+4 chihuahua
+5 collie
+6 curly coated retriever
+7 doberman
+8 flat coated retriever
+9 french bulldog
+10 german shepherd
+11 golden retriever
+12 great dane
+13 labrador retriever
+14 newfoundland
+15 pug
+16 saint bernard
+17 samoyed
+18 husky
+19 poodle
